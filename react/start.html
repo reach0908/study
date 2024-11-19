@@ -20,6 +20,17 @@
             font-family: sans-serif;
             color: #0080a8;
         }
+
+        .letter {
+            padding: 10px;
+            margin: 10px;
+            background-color: #0080a8;
+            color: #333;
+            display: inline-block;
+            font-family: monospace;
+            font-size: 32px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -33,21 +44,33 @@
         //     document.querySelector('#container')
         // );
 
-        class HelloWorld extends React.Component {
+        class Letter extends React.Component {
             render() {
-                return <p>Hello, {this.props.greetTarget}!</p>;
+                return <div className="letter">
+                    {this.props.children}
+                </div>
             }
         }
 
         var destination = document.querySelector("#container");
+
         ReactDOM.render(
             <div>
-                <HelloWorld greetTarget="world" />
-                <HelloWorld greetTarget="react" />
-                <HelloWorld greetTarget="babel" />
-                <HelloWorld greetTarget="webpack" />
-                <HelloWorld greetTarget="npm" />
-                <HelloWorld greetTarget="nodejs" />
+                <Letter>
+                    H
+                </Letter>
+                <Letter>
+                    e
+                </Letter>
+                <Letter>
+                    l
+                </Letter>
+                <Letter>
+                    l
+                </Letter>
+                <Letter>
+                    o
+                </Letter>
             </div>,
             destination
         );
