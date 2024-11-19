@@ -46,7 +46,17 @@
 
         class Letter extends React.Component {
             render() {
-                return <div className="letter">
+                var letterStyle = {
+                    padding: 10,
+                    margin: 10,
+                    backgroundColor: this.props.bgColor,
+                    color: '#333',
+                    display: 'inline-block',
+                    fontFamily: 'monospace',
+                    fontSize: 32,
+                    textAlign: 'center',
+                }
+                return <div style={letterStyle}>
                     {this.props.children}
                 </div>
             }
@@ -56,19 +66,19 @@
 
         ReactDOM.render(
             <div>
-                <Letter>
+                <Letter bgColor="#58B3FF">
                     H
                 </Letter>
-                <Letter>
+                <Letter bgColor="#FF6347">
                     e
                 </Letter>
-                <Letter>
+                <Letter bgColor="#FFFF00">
                     l
                 </Letter>
-                <Letter>
+                <Letter bgColor="#494949">
                     l
                 </Letter>
-                <Letter>
+                <Letter bgColor="#AEC6CF">
                     o
                 </Letter>
             </div>,
