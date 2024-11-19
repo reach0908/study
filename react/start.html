@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>React! React! React!</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <!-- 바벨은 jsx를 js로 변환해주는 도구이다. -->
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <style>
+            #container {
+                padding: 50px;
+                background-color: #EEE;
+            }
+            #container h1 {
+                font-size: 144px;
+                font-family: sans-serif;
+                color: #0080A8;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <!-- type="text/babel" 속성을 추가하면 브라우저가 jsx를 해석할 수 있게 된다. -->
+        <!-- ReactDOM.rener는 2개의 인자를 받는다. 첫번째는 렌더링할 요소, 두번째는 렌더링할 위치 -->
+        <script type="text/babel">
+            // ReactDOM.render(
+            //     <h1>Hello, world!</h1>,
+            //     document.querySelector('#container')
+            // );
+
+            class HelloWorld extends React.Component {
+                render() {
+                    return <p>Hello, world!</p>
+                }
+            }
+            
+            var destination = document.querySelector('#container');
+            ReactDOM.render(<div>
+                <HelloWorld />
+                </div>, destination);
+        </script>
+    </body>
+</html>
