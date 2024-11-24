@@ -28,6 +28,7 @@ class MenuContainer extends React.Component {
   }
 
   render() {
+    console.log("Rendering MenuContainer");
     return (
       <div>
         <MenuButton handleMouseDown={this.handleMouseDown} />
